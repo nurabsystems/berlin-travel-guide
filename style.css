@@ -1,0 +1,360 @@
+/* ============================================
+   Group A-2 — Berlin Travel Guide
+   Shared Stylesheet (style.css)
+   ============================================ */
+
+/* ---------- Reset ---------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------- Design Tokens ---------- */
+:root {
+  --primary: #1E6F5C;
+  --primary-dark: #145043;
+  --accent: #F4A261;
+  --accent-dark: #E76F51;
+  --dark: #1A1A1A;
+  --text: #2B2B2B;
+  --muted: #6B7280;
+  --light: #F8F9FA;
+  --white: #FFFFFF;
+  --radius: 12px;
+  --shadow-sm: 0 2px 6px rgba(0,0,0,0.06);
+  --shadow-md: 0 8px 24px rgba(0,0,0,0.10);
+  --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --transition: 0.3s ease;
+}
+
+/* ---------- Base ---------- */
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: var(--font-main);
+  color: var(--text);
+  background: linear-gradient(135deg, #F8F9FA 0%, #E9ECEF 100%);
+  line-height: 1.65;
+  min-height: 100vh;
+}
+
+img { max-width: 100%; height: auto; display: block; }
+
+a { color: var(--primary); transition: color var(--transition); }
+a:hover { color: var(--accent-dark); }
+
+/* ---------- Container ---------- */
+.container {
+  width: min(1100px, 100% - 2rem);
+  margin-inline: auto;
+}
+
+/* ---------- Header ---------- */
+.site-header {
+  background: var(--primary);
+  color: var(--white);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 0;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+.logo:hover { color: var(--accent); }
+
+.nav-list {
+  display: flex;
+  gap: 1.25rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.35rem 0.25rem;
+  position: relative;
+  transition: color var(--transition);
+}
+
+.nav-list a::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 0; height: 2px;
+  background: var(--accent);
+  transition: width var(--transition);
+}
+.nav-list a:hover::after,
+.nav-list a.active::after { width: 100%; }
+.nav-list a:hover,
+.nav-list a.active { color: var(--accent); }
+
+/* ---------- Hero ---------- */
+.hero {
+  background:
+    linear-gradient(135deg, rgba(30,111,92,0.92), rgba(244,162,97,0.85)),
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15), transparent 60%);
+  color: var(--white);
+  text-align: center;
+  padding: 5rem 1rem;
+  border-bottom: 4px solid var(--accent);
+}
+
+.hero h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 0.75rem;
+}
+
+.hero-tagline {
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  max-width: 620px;
+  margin: 0 auto 1.75rem;
+  opacity: 0.95;
+}
+
+/* ---------- Buttons ---------- */
+.btn {
+  display: inline-block;
+  padding: 0.85rem 1.75rem;
+  border-radius: var(--radius);
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+  border: none;
+}
+.btn-primary {
+  background: var(--accent);
+  color: var(--dark);
+  box-shadow: var(--shadow-md);
+}
+.btn-primary:hover {
+  background: var(--accent-dark);
+  color: var(--white);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+}
+
+/* ---------- Sections ---------- */
+.section {
+  padding: 3rem 0;
+}
+
+.section-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 800;
+  color: var(--primary-dark);
+  margin-bottom: 1.25rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 60px; height: 4px;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ---------- Figures ---------- */
+.hero-figure {
+  margin: 2rem 0;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+}
+.hero-figure img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+.hero-figure:hover img { transform: scale(1.03); }
+.hero-figure figcaption {
+  padding: 0.75rem 1rem;
+  font-size: 0.9rem;
+  color: var(--muted);
+  background: var(--white);
+}
+
+/* ✅ Map figure (image that works as a link) */
+.map-figure {
+  margin-top: 1.5rem;
+}
+.map-figure img,
+.map-thumb {
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+  cursor: pointer;
+}
+.map-figure img:hover,
+.map-thumb:hover {
+  transform: scale(1.02);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Experience List ---------- */
+.experience-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+}
+.experience-list li {
+  background: var(--white);
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  transition: transform var(--transition), box-shadow var(--transition);
+}
+.experience-list li:hover {
+  transform: translateX(6px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ---------- Table ---------- */
+.table-wrap { overflow-x: auto; }
+
+
+/* ============================================
+   HAMBURGER MENU
+   ============================================ */
+
+/* Hide the hamburger button by default (desktop) */
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+
+/* The three bars */
+.hamburger-bar {
+  display: block;
+  width: 26px;
+  height: 3px;
+  background: var(--white);
+  border-radius: 2px;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
+}
+
+/* Animate hamburger into an X when menu is open */
+.nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(2) {
+  opacity: 0;
+}
+.nav-toggle[aria-expanded="true"] .hamburger-bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Mobile behavior (<= 768px) */
+@media (max-width: 768px) {
+  /* Show the hamburger */
+  .nav-toggle {
+    display: block;
+  }
+
+  /* Make header-inner a flex row with space-between */
+  .header-inner {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+  }
+
+  /* Hide the nav off-canvas by default */
+  .site-nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: var(--primary);
+    padding: 0 1rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    box-shadow: var(--shadow-md);
+  }
+
+  /* Show the nav when .open is applied */
+  .site-nav.open {
+    max-height: 500px;
+    padding: 1rem;
+  }
+
+  /* Stack nav links vertically */
+  .site-nav .nav-list {
+    flex-direction: column;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  .site-nav .nav-list li {
+    width: 100%;
+  }
+
+  .site-nav .nav-list a {
+    display: block;
+    padding: 0.75rem 0.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: background 0.2s ease;
+  }
+
+  .site-nav .nav-list a:hover,
+  .site-nav .nav-list a.active {
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  /* Disable the underline animation on mobile (looks odd) */
+  .site-nav .nav-list a::after {
+    display: none;
+  }
+}
+
+/* Reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  .site-nav,
+  .hamburger-bar,
+  .nav-toggle {
+    transition: none !important;
+  }
+}

@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Berlin Travel Guide — discover the best of Germany's vibrant capital: attractions, food, and transport."
+    />
+    <meta name="author" content="Group A-2 — Frontend Practicum" />
+    <title>Berlin Travel Guide — Home</title>
+
+    <!-- Favicon: SVG for modern browsers-->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <!-- Shared stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- AOS animation library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- Semantic <header> -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Berlin Travel Guide home">
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#1E6F5C" />
+            <path
+              d="M10 26V10h6a4 4 0 0 1 0 8h-2v8h-4zm4-11h2a1 1 0 0 0 0-2h-2v2z"
+              fill="#fff"
+            />
+          </svg>
+          <span>Berlin Guide</span>
+        </a>
+
+        <!-- Hamburger toggle button (mobile only) -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html" class="active" aria-current="page">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="transport.html">Transport</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Semantic <main> -->
+    <main>
+      <section class="hero" data-aos="fade-up">
+        <div class="container hero-content">
+          <h1>Discover Berlin</h1>
+          <p class="hero-tagline">
+            History, art, food, and endless energy — your complete guide to
+            Germany's vibrant capital.
+          </p>
+          <a href="attractions.html" class="btn btn-primary"
+            >Explore Attractions</a
+          >
+        </div>
+      </section>
+
+      <section class="container section" data-aos="fade-up">
+        <h2 class="section-title">Welcome to Berlin</h2>
+        <p>
+          Berlin is a city where history meets innovation. From the iconic
+          <strong>Brandenburg Gate</strong> to the street-art-covered remains of
+          the Berlin Wall, every corner tells a story. This guide will help you
+          plan an unforgettable visit.
+        </p>
+
+        <figure class="hero-figure">
+          <img
+            src="images/berlin-hero.jpg"
+            alt="The Brandenburg Gate illuminated at sunset in Berlin"
+            width="1200"
+            height="600"
+            loading="lazy"
+          />
+          <figcaption>Brandenburg Gate at sunset</figcaption>
+        </figure>
+
+        <figure class="map-figure">
+          <a
+            href="attractions.html"
+            aria-label="See Berlin attractions on the map"
+          >
+            <img
+              src="images/berlin-map.jpg"
+              alt="Illustrated map of Berlin showing key attractions"
+              width="400"
+              height="300"
+              class="map-thumb"
+              loading="lazy"
+            />
+          </a>
+        </figure>
+      </section>
+
+      <section class="container section" data-aos="fade-up">
+        <h2 class="section-title">Top Experiences</h2>
+        <ul class="experience-list">
+          <li>Walk through the historic Brandenburg Gate</li>
+          <li>Explore the museums on Museum Island</li>
+          <li>Taste authentic currywurst at a street stall</li>
+          <li>Cycle along the Berlin Wall Memorial</li>
+          <li>Relax in Tiergarten, Berlin's green heart</li>
+        </ul>
+      </section>
+
+      <section class="container section" data-aos="fade-up">
+        <h2 class="section-title">Berlin at a Glance</h2>
+
+        <div class="table-wrap">
+          <table class="facts-table">
+            <thead>
+              <tr>
+                <th colspan="2">Quick Facts About Berlin</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Country</td>
+                <td>Germany</td>
+              </tr>
+              <tr>
+                <td>Population</td>
+                <td>3.7 million</td>
+              </tr>
+              <tr>
+                <td>Language</td>
+                <td>German</td>
+              </tr>
+              <tr>
+                <td>Best time to visit</td>
+                <td>May – September</td>
+              </tr>
+              <tr>
+                <td>Currency</td>
+                <td>Euro (€)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="container section" data-aos="fade-up">
+        <h2 class="section-title">Gallery</h2>
+        <div class="gallery">
+          <img
+            src="images/gallery-1.jpg"
+            alt="Berlin Cathedral"
+            width="300"
+            height="200"
+            loading="lazy"
+          />
+          <img
+            src="images/gallery-2.jpg"
+            alt="East Side Gallery street art"
+            width="300"
+            height="200"
+            loading="lazy"
+          />
+          <img
+            src="images/gallery-3.jpg"
+            alt="Berlin TV Tower"
+            width="300"
+            height="200"
+            loading="lazy"
+          />
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Learn more at
+          <a
+            href="https://www.berlin.de/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Berlin.de
+          </a>
+          &nbsp;|&nbsp;
+          <a href="mailto:mayerfieldpracticum@gmail.com">Contact Group A-2</a>
+        </p>
+        <p class="copyright">
+          &copy; 2026 Group A-2 — Frontend Practicum | Built with semantic HTML
+          &amp; CSS
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
+    <!-- Hamburger menu + shared scripts -->
+    <script defer src="script.js"></script>
+  </body>
+</html>

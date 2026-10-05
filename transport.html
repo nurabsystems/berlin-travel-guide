@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Navigate Berlin easily — U-Bahn, S-Bahn, buses, trams, and bikes."
+    />
+    <meta name="author" content="Group A-2 — Frontend Practicum" />
+    <title>Berlin Travel Guide — Transport</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Berlin Travel Guide home">
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#1E6F5C" />
+            <path
+              d="M10 26V10h6a4 4 0 0 1 0 8h-2v8h-4zm4-11h2a1 1 0 0 0 0-2h-2v2z"
+              fill="#fff"
+            />
+          </svg>
+          <span>Berlin Guide</span>
+        </a>
+
+        <!-- Hamburger toggle button (mobile only) -->
+        <button
+          class="nav-toggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primary-nav"
+        >
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+
+        <nav id="primary-nav" class="site-nav" aria-label="Main navigation">
+          <ul class="nav-list">
+            <li>
+              <a href="index.html">Home</a>
+            </li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li>
+              <a href="transport.html" class="active" aria-current="page"
+                >Transport</a
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- YOUSSEF — REPLACE WITH YOUR CONTENT -->
+
+      <section class="container section" data-aos="fade-up">
+        <h1>Getting Around Berlin</h1>
+        <p>
+          Placeholder — Youssef will explain Berlin's public transport system,
+          including tickets, apps, and route tips.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Learn more at
+          <a
+            href="https://www.berlin.de/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Berlin.de</a
+          >
+          &nbsp;|&nbsp;
+          <a href="mailto:mayerfieldpracticum@gmail.com">Contact Group A-2</a>
+        </p>
+        <p class="copyright">
+          &copy; 2026 Group A-2 — Frontend Practicum | Built with semantic HTML
+          &amp; CSS
+        </p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
+    <!-- Hamburger menu + shared scripts -->
+    <script defer src="script.js"></script>
+  </body>
+</html>

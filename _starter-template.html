@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- ============================================================
+       GROUP A-2 — BERLIN TRAVEL GUIDE
+       STARTER TEMPLATE
+       ------------------------------------------------------------
+       HOW TO USE THIS FILE:
+       1. Copy this file
+       2. Rename the copy to YOUR page (e.g., about.html, food.html)
+       3. Change ONLY the <title> and <meta description> tags
+       4. Replace ONLY the <main> content with your page content
+       5. Do NOT change: header, nav, footer, stylesheet links, scripts
+       ============================================================ -->
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Berlin Travel Guide — YOUR PAGE DESCRIPTION HERE"
+    />
+    <meta name="author" content="Group A-2 — Frontend Practicum" />
+
+    <!-- ✅ CHANGE THIS TITLE TO MATCH YOUR PAGE -->
+    <title>Berlin Travel Guide — YOUR PAGE NAME</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+
+    <link rel="manifest" href="site.webmanifest" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="index.html" class="logo" aria-label="Berlin Travel Guide home">
+          <svg width="36" height="36" viewBox="0 0 36 36" aria-hidden="true">
+            <rect width="36" height="36" rx="8" fill="#1E6F5C" />
+            <path
+              d="M10 26V10h6a4 4 0 0 1 0 8h-2v8h-4zm4-11h2a1 1 0 0 0 0-2h-2v2z"
+              fill="#fff"
+            />
+          </svg>
+          <span>Berlin Guide</span>
+        </a>
+
+        <nav aria-label="Main navigation">
+          <ul class="nav-list">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="food.html">Food</a></li>
+            <li><a href="transport.html">Transport</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============================================
+         REPLACE THIS <main> WITH YOUR CONTENT
+
+         Requirements for YOUR page:
+         - At least one <img> with alt, width, height
+         - At least one <img> wrapped in <a> (image as link)
+         - One <ul> or <ol> list
+         - One <table> with <thead>, <tbody>, and colspan OR rowspan
+         - Use semantic tags: <section>, <article>, <aside>
+         - Add data-aos="fade-up" to sections for scroll animations
+         ============================================ -->
+
+      <section class="container section" data-aos="fade-up">
+        <h1>YOUR PAGE HEADING</h1>
+        <p>Your content goes here. Replace this entire section.</p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          Learn more at
+          <a
+            href="https://www.berlin.de/en/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Berlin.de
+          </a>
+          &nbsp;|&nbsp;
+          <a href="mailto:mayerfieldpracticum@gmail.com">Contact Group A-2</a>
+        </p>
+        <p class="copyright">
+          &copy; 2026 Group A-2 — Frontend Practicum | Built with semantic HTML
+          &amp; CSS
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 800, once: true, offset: 100 });
+    </script>
+  </body>
+</html>

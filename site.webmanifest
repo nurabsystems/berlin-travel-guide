@@ -1,0 +1,16 @@
+{
+  "name": "Berlin Travel Guide",
+  "short_name": "Berlin Guide",
+  "description": "Your complete guide to Germany's vibrant capital — attractions, food, and transport.",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ],
+  "theme_color": "#1E6F5C",
+  "background_color": "#F8F9FA",
+  "display": "standalone",
+  "start_url": "./index.html"
+}
